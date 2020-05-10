@@ -5,6 +5,7 @@ import createSchema from 'part:@sanity/base/schema-creator'
 import schemaTypes from 'all:part:@sanity/base/schema-type'
 
 // Document types
+import synopsis from './documents/synopsis'
 import category from './documents/category'
 
 // Objects
@@ -21,6 +22,7 @@ export default createSchema({
     simplePortableText,
     
     // Documents
+    synopsis,
     category
   ])
 })
