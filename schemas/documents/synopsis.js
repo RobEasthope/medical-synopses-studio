@@ -21,13 +21,31 @@ export default {
             validation: Rule => Rule.required()
         },
         {
-            name: 'journal',
-            type: 'string',
-            title: 'Journal'
+            name: 'paperUrl',
+            title: 'paperUrl',
+            type: 'url',
         },
-    {
-            name: 'content',
-            title: 'Content',
+        {
+            name: 'paperPublicationDate',
+            title: 'Paper publication datte',
+            type: 'date',
+        },
+        
+        {
+            name: 'methods',
+            title: 'Methods',
+            type: 'simplePortableText',
+            validation: Rule => Rule.required()
+        },
+        {
+            name: 'keyFindings',
+            title: 'Key findings',
+            type: 'simplePortableText',
+            validation: Rule => Rule.required()
+        },
+        {
+            name: 'implications',
+            title: 'Implications',
             type: 'simplePortableText',
             validation: Rule => Rule.required()
         }
