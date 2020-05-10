@@ -2,7 +2,7 @@
   "root": true,
   "project": {
     "name": "medical-synopses",
-    "basePath": "/dist"
+    "basePath": "./"
   },
   "plugins": [
     "@sanity/base",
