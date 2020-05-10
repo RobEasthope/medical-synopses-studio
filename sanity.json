@@ -4,10 +4,6 @@
     "name": "medical-synopses",
     "basePath": "/dist"
   },
-  "api": {
-    "projectId": "",
-    "dataset": ""
-  },
   "plugins": [
     "@sanity/base",
     "@sanity/components",
