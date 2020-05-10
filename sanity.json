@@ -1,8 +1,11 @@
 {
   "root": true,
+  "api": {
+    "projectId": "XXX",
+    "dataset": "XXX"
+  },
   "project": {
-    "name": "medical-synopses",
-    "basePath": "./"
+    "name": "medical-synopses"
   },
   "plugins": [
     "@sanity/base",
