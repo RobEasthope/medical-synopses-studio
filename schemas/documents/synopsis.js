@@ -82,7 +82,19 @@ export default {
   preview: {
     select: {
       title: 'title',
-      // subtitle: 'releaseDate'
+      category0: 'category.0.title',
+      category1: 'category.1.title',
+      category2: 'category.2.title',
+      category3: 'category.3.title',
+    },
+    prepare({ title, category0, category1, category2, category3 }) {
+      const categories = [category0, category1, category2].filter(Boolean);
+      const subtitle = categories.length > 0 ? `${categories.join(', ')}` : '';
+      const hasMoreCategories = Boolean(category3);
+      return {
+        title,
+        subtitle: hasMoreCategories ? `${subtitle}…` : subtitle,
+      };
     },
   },
 };
