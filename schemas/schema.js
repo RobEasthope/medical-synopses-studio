@@ -1,15 +1,17 @@
 // First, we must import the schema creator
-import createSchema from 'part:@sanity/base/schema-creator'
+// eslint-disable-next-line import/no-unresolved
+import createSchema from 'part:@sanity/base/schema-creator';
 
 // Then import schema types from any plugins that might expose them
-import schemaTypes from 'all:part:@sanity/base/schema-type'
+// eslint-disable-next-line import/no-unresolved
+import schemaTypes from 'all:part:@sanity/base/schema-type';
 
 // Document types
-import synopsis from './documents/synopsis'
-import category from './documents/category'
+import synopsis from './documents/synopsis';
+import category from './documents/category';
 
 // Objects
-import simplePortableText from './objects/simplePortableText'
+import simplePortableText from './objects/simplePortableText';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -20,9 +22,9 @@ export default createSchema({
   types: schemaTypes.concat([
     // Objects
     simplePortableText,
-    
+
     // Documents
     synopsis,
-    category
-  ])
-})
+    category,
+  ]),
+});
