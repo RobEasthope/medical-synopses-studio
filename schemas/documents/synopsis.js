@@ -4,7 +4,8 @@ export default {
     title: 'Synopsis',
     fields: [
         {
-            name: 'Paper',
+            name: 'paper',
+            title: 'Paper details',
             type: 'object',
             fields: [
                 {
