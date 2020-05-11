@@ -1,7 +1,7 @@
 import S from '@sanity/desk-tool/structure-builder';
 
 import { GoMailRead } from 'react-icons/go';
-import { GiPlagueDoctorProfile, GiCaduceus } from 'react-icons/gi';
+import { GiPlagueDoctorProfile, GiRodOfAsclepius } from 'react-icons/gi';
 import { IoIosSettings } from 'react-icons/io';
 import { BsFileRichtext } from 'react-icons/bs';
 
@@ -12,7 +12,7 @@ export default () =>
       S.listItem()
         .title('Synopses')
         .schemaType('synopsis')
-        .icon(GiCaduceus)
+        .icon(GiRodOfAsclepius)
         .child(S.documentTypeList('synopsis')),
       S.listItem()
         .title('Pages')
