@@ -42,7 +42,7 @@ export default () =>
             ])
         ),
       S.listItem()
-        .title('settings')
+        .title('Settings')
         .schemaType('settings')
         .child(
           S.editor()
