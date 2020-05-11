@@ -46,7 +46,8 @@ export default {
             ]
         },
         {
-            name: 'Synopsis',
+            name: 'synopsis',
+            title: 'Synopsis',
             type: 'object',
             fields: [
                 {
