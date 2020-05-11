@@ -39,6 +39,15 @@ export default () =>
                     .documentId('about')
                 )
                 .icon(GoNote),
+              S.listItem()
+                .title('Contact page')
+                .child(
+                  S.editor()
+                    .id('contact')
+                    .schemaType('contact')
+                    .documentId('contact')
+                )
+                .icon(GoNote),
             ])
         ),
     ]);
