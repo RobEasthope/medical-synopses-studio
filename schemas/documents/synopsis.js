@@ -21,6 +21,7 @@ export default {
       fieldset: 'paperDetails',
       options: {
         source: 'title',
+        maxLength: 200,
         validation: Rule => Rule.required(),
       },
     },
