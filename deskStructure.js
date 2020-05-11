@@ -50,4 +50,13 @@ export default () =>
                 .icon(GoNote),
             ])
         ),
+      S.listItem()
+        .title('settings')
+        .schemaType('settings')
+        .child(
+          S.editor()
+            .id('settings')
+            .schemaType('settings')
+            .documentId('settings')
+        ),
     ]);
