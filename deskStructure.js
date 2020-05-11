@@ -1,16 +1,9 @@
 import S from '@sanity/desk-tool/structure-builder';
-import {
-  GoBook,
-  GoBookmark,
-  GoBriefcase,
-  GoCode,
-  GoNote,
-  GoPaintcan,
-  GoPerson,
-  GoRocket,
-  GoTerminal,
-} from 'react-icons/go';
-import { FaRegAddressCard, FaUniversity } from 'react-icons/fa';
+
+import { GoMailRead } from 'react-icons/go';
+import { GrUserSettings, GrTextWrap } from 'react-icons/gr';
+import { GiPlagueDoctorProfile } from 'react-icons/gi';
+import { IoMdMedical } from 'react-icons/io';
 
 // const hiddenTypes = ['about'];
 
@@ -21,11 +14,11 @@ export default () =>
       S.listItem()
         .title('Synopses')
         .schemaType('synopsis')
-        .icon(GoPaintcan)
+        .icon(IoMdMedical)
         .child(S.documentTypeList('synopsis')),
       S.listItem()
         .title('Pages')
-        .icon(GoBook)
+        .icon(GrTextWrap)
         .child(
           S.list()
             .title('Pages')
@@ -38,7 +31,7 @@ export default () =>
                     .schemaType('about')
                     .documentId('about')
                 )
-                .icon(GoNote),
+                .icon(GiPlagueDoctorProfile),
               S.listItem()
                 .title('Contact page')
                 .child(
@@ -47,7 +40,7 @@ export default () =>
                     .schemaType('contact')
                     .documentId('contact')
                 )
-                .icon(GoNote),
+                .icon(GoMailRead),
             ])
         ),
       S.listItem()
@@ -58,5 +51,6 @@ export default () =>
             .id('settings')
             .schemaType('settings')
             .documentId('settings')
-        ),
+        )
+        .icon(GrUserSettings),
     ]);
