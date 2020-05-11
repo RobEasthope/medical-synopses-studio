@@ -33,7 +33,7 @@ export default {
                 },
                 {
                     name: 'paperPublicationDate',
-                    title: 'Paper publication datte',
+                    title: 'Paper publication date',
                     type: 'date',
                 },
                 {
