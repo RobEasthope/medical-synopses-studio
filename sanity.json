@@ -5,7 +5,7 @@
     "dataset": "XXX"
   },
   "project": {
-    "name": "medical-synopses"
+    "name": "Medical Synopses"
   },
   "plugins": [
     "@sanity/base",
