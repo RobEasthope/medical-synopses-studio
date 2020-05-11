@@ -5,7 +5,11 @@ import createSchema from 'part:@sanity/base/schema-creator'
 import schemaTypes from 'all:part:@sanity/base/schema-type'
 
 // Document types
+import synopsis from './documents/synopsis'
 import category from './documents/category'
+
+// Objects
+import simplePortableText from './objects/simplePortableText'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -14,6 +18,11 @@ export default createSchema({
   // Then proceed to concatenate our document type
   // to the ones provided by any plugins that are installed
   types: schemaTypes.concat([
+    // Objects
+    simplePortableText,
+    
+    // Documents
+    synopsis,
     category
   ])
 })
