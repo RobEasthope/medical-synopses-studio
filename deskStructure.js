@@ -1,121 +1,54 @@
 import S from '@sanity/desk-tool/structure-builder';
-import {
-  GoBook,
-  GoBookmark,
-  GoBriefcase,
-  GoCode,
-  GoNote,
-  GoPaintcan,
-  GoPerson,
-  GoRocket,
-  GoTerminal,
-} from 'react-icons/go';
-import { FaRegAddressCard, FaUniversity } from 'react-icons/fa';
 
-// const hiddenTypes = ['project'];
+import { GoMailRead } from 'react-icons/go';
+import { GiPlagueDoctorProfile, GiRodOfAsclepius } from 'react-icons/gi';
+import { IoIosSettings } from 'react-icons/io';
+import { BsFileRichtext } from 'react-icons/bs';
 
 export default () =>
   S.list()
     .title('Content')
     .items([
       S.listItem()
-        .title('Projects')
-        .schemaType('project')
-        .icon(GoPaintcan)
-        .child(S.documentTypeList('project')),
+        .title('Synopses')
+        .schemaType('synopsis')
+        .icon(GiRodOfAsclepius)
+        .child(S.documentTypeList('synopsis')),
       S.listItem()
-        .title('Index page')
-        .icon(GoBook)
+        .title('Pages')
+        .icon(BsFileRichtext)
         .child(
           S.list()
-            .title('Sections')
+            .title('Pages')
             .items([
               S.listItem()
-                .title('Landing section')
-                .child(
-                  S.editor()
-                    .id('landing')
-                    .schemaType('landing')
-                    .documentId('landing')
-                )
-                .icon(GoNote),
-              S.listItem()
-                .title('Portfolio section')
-                .child(
-                  S.editor()
-                    .id('portfolio')
-                    .schemaType('portfolio')
-                    .documentId('portfolio')
-                )
-                .icon(GoBookmark),
-              S.listItem()
-                .title('Sandbox section')
-                .child(
-                  S.editor()
-                    .id('sandbox')
-                    .schemaType('sandbox')
-                    .documentId('sandbox')
-                )
-                .icon(GoRocket),
-            ])
-        ),
-      S.listItem()
-        .title('About')
-        .icon(GoTerminal)
-        .child(
-          S.list()
-            .title('About')
-            .items([
-              S.listItem()
-                .title('Profile')
+                .title('About page')
                 .child(
                   S.editor()
                     .id('about')
                     .schemaType('about')
                     .documentId('about')
                 )
-                .icon(GoPerson),
+                .icon(GiPlagueDoctorProfile),
               S.listItem()
-                .title('Gigs')
-                .icon(GoBriefcase)
-                .child(
-                  S.documentTypeList('gig').defaultOrdering([
-                    { field: 'name', direction: 'desc' },
-                  ])
-                ),
-              S.listItem()
-                .title('Technologies')
-                .icon(GoCode)
-                .child(
-                  S.documentTypeList('tech').defaultOrdering([
-                    { field: 'name', direction: 'desc' },
-                  ])
-                ),
-              S.listItem()
-                .title('Organisations')
-                .icon(FaRegAddressCard)
-                .child(
-                  S.documentTypeList('organisation').defaultOrdering([
-                    { field: 'name', direction: 'desc' },
-                  ])
-                ),
-              S.listItem()
-                .title('Education')
-                .icon(FaUniversity)
-                .child(
-                  S.documentTypeList('education').defaultOrdering([
-                    { field: 'name', direction: 'desc' },
-                  ])
-                ),
-              S.listItem()
-                .title('Contact details')
+                .title('Contact page')
                 .child(
                   S.editor()
-                    .id('details')
-                    .schemaType('details')
-                    .documentId('details')
+                    .id('contact')
+                    .schemaType('contact')
+                    .documentId('contact')
                 )
-                .icon(FaRegAddressCard),
+                .icon(GoMailRead),
             ])
         ),
+      S.listItem()
+        .title('Settings')
+        .schemaType('settings')
+        .child(
+          S.editor()
+            .id('settings')
+            .schemaType('settings')
+            .documentId('settings')
+        )
+        .icon(IoIosSettings),
     ]);

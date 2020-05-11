@@ -23,8 +23,8 @@ export default {
     },
     {
       name: 'contactText',
-      title: 'About text',
-      type: 'simplePortableText',
+      title: 'Contact text',
+      type: 'simpleRichText',
       validation: Rule => Rule.required(),
     },
   ],

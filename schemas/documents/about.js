@@ -24,13 +24,12 @@ export default {
     {
       name: 'aboutText',
       title: 'About text',
-      type: 'simplePortableText',
+      type: 'simpleRichText',
       validation: Rule => Rule.required(),
     },
     {
       name: 'photo',
-
-      title: 'photo',
+      title: 'Photo',
       type: 'image',
       options: {
         hotspot: true,
