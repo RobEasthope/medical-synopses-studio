@@ -1,6 +1,6 @@
 export default {
-  title: 'Simple portable text',
-  name: 'simplePortableText',
+  title: 'Simple rich text',
+  name: 'simpleRichText',
   type: 'array',
   of: [
     {

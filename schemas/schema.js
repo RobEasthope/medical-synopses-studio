@@ -11,7 +11,7 @@ import synopsis from './documents/synopsis';
 import category from './documents/category';
 
 // Objects
-import simplePortableText from './objects/simplePortableText';
+import simpleRichText from './objects/simpleRichText';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -21,7 +21,7 @@ export default createSchema({
   // to the ones provided by any plugins that are installed
   types: schemaTypes.concat([
     // Objects
-    simplePortableText,
+    simpleRichText,
 
     // Documents
     synopsis,
