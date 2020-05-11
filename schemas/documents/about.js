@@ -1,7 +1,7 @@
 export default {
-    name: 'synopsis',
+    name: 'about',
     type: 'document',
-    title: 'Synopsis',
+    title: 'About',
     fields: [
         {
             name: 'title',
@@ -21,7 +21,7 @@ export default {
             validation: Rule => Rule.required()
         },
         {
-            name: 'aboutContent',
+            name: 'aboutText',
             title: 'About text',
             type: 'simplePortableText',
             validation: Rule => Rule.required()
