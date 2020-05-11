@@ -2,8 +2,8 @@ import S from '@sanity/desk-tool/structure-builder';
 
 import { GoMailRead } from 'react-icons/go';
 import { GrUserSettings, GrTextWrap } from 'react-icons/gr';
-import { GiPlagueDoctorProfile } from 'react-icons/gi';
-import { IoMdMedical } from 'react-icons/io';
+import { GiPlagueDoctorProfile, GiCaduceus } from 'react-icons/gi';
+import { IoIosSettings } from 'react-icons/io';
 
 // const hiddenTypes = ['about'];
 
@@ -14,7 +14,7 @@ export default () =>
       S.listItem()
         .title('Synopses')
         .schemaType('synopsis')
-        .icon(IoMdMedical)
+        .icon(GiCaduceus)
         .child(S.documentTypeList('synopsis')),
       S.listItem()
         .title('Pages')
@@ -52,5 +52,5 @@ export default () =>
             .schemaType('settings')
             .documentId('settings')
         )
-        .icon(GrUserSettings),
+        .icon(IoIosSettings),
     ]);
