@@ -2,84 +2,98 @@ export default {
   name: 'synopsis',
   type: 'document',
   title: 'Synopsis',
+  fieldsets: [
+    { name: 'paperDetails', title: 'Paper details' },
+    { name: 'synopsis', title: 'Synopsis' },
+  ],
   fields: [
     {
-      name: 'paper',
-      title: 'Paper details',
-      type: 'object',
-      fields: [
-        {
-          name: 'title',
-          title: 'Title',
-          type: 'string',
-          validation: Rule => Rule.required(),
-        },
-        {
-          name: 'slug',
-          title: 'Slug',
-          type: 'slug',
-          description:
-            'Some frontends will require a slug to be set to show the project',
-          options: {
-            source: 'title',
-            maxLength: 96,
-          },
-          validation: Rule => Rule.required(),
-        },
-        {
-          name: 'paperUrl',
-          title: 'Paper URL',
-          type: 'url',
-          validation: Rule => Rule.required(),
-        },
-        {
-          name: 'paperPublicationDate',
-          title: 'Paper publication date',
-          type: 'date',
-        },
-        {
-          name: 'category',
-          title: 'Category',
-          type: 'reference',
-          to: [{ type: 'category' }],
-          validation: Rule => Rule.required(),
-        },
-      ],
+      name: 'title',
+      title: 'Title',
+      type: 'string',
+      validation: Rule => Rule.required(),
     },
     {
-      name: 'synopsis',
-      title: 'Synopsis',
-      type: 'object',
-      fields: [
+      name: 'methods',
+      title: 'Methods',
+      type: 'simpleRichText',
+      fieldset: 'synopsis',
+      validation: Rule => Rule.required(),
+    },
+    {
+      name: 'keyFindings',
+      title: 'Key findings',
+      type: 'simpleRichText',
+      fieldset: 'synopsis',
+      validation: Rule => Rule.required(),
+    },
+    {
+      name: 'implications',
+      title: 'Implications',
+      type: 'simpleRichText',
+      fieldset: 'synopsis',
+      validation: Rule => Rule.required(),
+    },
+    {
+      name: 'journal',
+      title: 'Journal',
+      type: 'string',
+      fieldset: 'paperDetails',
+      validation: Rule => Rule.required(),
+    },
+    {
+      name: 'paperUrl',
+      title: 'Paper URL',
+      type: 'url',
+      fieldset: 'paperDetails',
+      validation: Rule => Rule.required(),
+    },
+    {
+      name: 'paperPublicationDate',
+      title: 'Paper publication date',
+      type: 'date',
+      fieldset: 'paperDetails',
+    },
+    {
+      name: 'category',
+      title: 'Category',
+      type: 'array',
+      of: [
         {
-          name: 'methods',
-          title: 'Methods',
-          type: 'simplePortableText',
-          validation: Rule => Rule.required(),
-        },
-        {
-          name: 'keyFindings',
-          title: 'Key findings',
-          type: 'simplePortableText',
-          validation: Rule => Rule.required(),
-        },
-        {
-          name: 'implications',
-          title: 'Implications',
-          type: 'simplePortableText',
-          validation: Rule => Rule.required(),
+          type: 'reference',
+          to: [{ type: 'category' }],
         },
       ],
+      fieldset: 'paperDetails',
+      validation: Rule => Rule.required(),
+    },
+    {
+      title: 'Slug',
+      name: 'slug',
+      type: 'slug',
+      fieldset: 'paperDetails',
+      options: {
+        source: 'title',
+        maxLength: 200,
+        validation: Rule => Rule.required(),
+      },
     },
   ],
   preview: {
     select: {
       title: 'title',
-      slug: 'slug',
+      category0: 'category.0.title',
+      category1: 'category.1.title',
+      category2: 'category.2.title',
+      category3: 'category.3.title',
     },
-    prepare({ title = '' }) {
+    prepare({ title, category0, category1, category2, category3 }) {
+      const categories = [category0, category1, category2].filter(Boolean);
+      const subtitle = categories.length > 0 ? `${categories.join(', ')}` : '';
+      const hasMoreCategories = Boolean(category3);
       return {
         title,
+        subtitle: hasMoreCategories ? `${subtitle}…` : subtitle,
       };
     },
   },
