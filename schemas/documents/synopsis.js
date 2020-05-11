@@ -53,7 +53,6 @@ export default {
       fieldset: 'paperDetails',
       validation: Rule => Rule.required(),
     },
-
     {
       name: 'methods',
       title: 'Methods',
