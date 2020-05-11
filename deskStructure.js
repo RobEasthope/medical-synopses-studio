@@ -1,11 +1,9 @@
 import S from '@sanity/desk-tool/structure-builder';
 
 import { GoMailRead } from 'react-icons/go';
-import { GrUserSettings, GrTextWrap } from 'react-icons/gr';
 import { GiPlagueDoctorProfile, GiCaduceus } from 'react-icons/gi';
 import { IoIosSettings } from 'react-icons/io';
-
-// const hiddenTypes = ['about'];
+import { BsFileRichtext } from 'react-icons/bs';
 
 export default () =>
   S.list()
@@ -18,7 +16,7 @@ export default () =>
         .child(S.documentTypeList('synopsis')),
       S.listItem()
         .title('Pages')
-        .icon(GrTextWrap)
+        .icon(BsFileRichtext)
         .child(
           S.list()
             .title('Pages')
