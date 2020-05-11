@@ -75,12 +75,7 @@ export default {
   preview: {
     select: {
       title: 'title',
-      slug: 'slug',
-    },
-    prepare({ title = '' }) {
-      return {
-        title,
-      };
+      // subtitle: 'releaseDate'
     },
   },
 };
