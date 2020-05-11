@@ -35,17 +35,6 @@ export default {
       validation: Rule => Rule.required(),
     },
     {
-      title: 'Slug',
-      name: 'slug',
-      type: 'slug',
-      fieldset: 'paperDetails',
-      options: {
-        source: 'title',
-        maxLength: 200,
-        validation: Rule => Rule.required(),
-      },
-    },
-    {
       name: 'journal',
       title: 'Journal',
       type: 'string',
@@ -77,6 +66,17 @@ export default {
       ],
       fieldset: 'paperDetails',
       validation: Rule => Rule.required(),
+    },
+    {
+      title: 'Slug',
+      name: 'slug',
+      type: 'slug',
+      fieldset: 'paperDetails',
+      options: {
+        source: 'title',
+        maxLength: 200,
+        validation: Rule => Rule.required(),
+      },
     },
   ],
   preview: {
