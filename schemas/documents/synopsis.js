@@ -26,6 +26,13 @@ export default {
       },
     },
     {
+      name: 'journal',
+      title: 'Journal',
+      type: 'string',
+      fieldset: 'paperDetails',
+      validation: Rule => Rule.required(),
+    },
+    {
       name: 'paperUrl',
       title: 'Paper URL',
       type: 'url',
