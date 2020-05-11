@@ -11,24 +11,35 @@ export default {
       name: 'title',
       title: 'Title',
       type: 'string',
-      fieldset: 'paperDetails',
       validation: Rule => Rule.required(),
     },
     {
-      title: 'Slug',
-      name: 'slug',
-      type: 'slug',
+      name: 'methods',
+      title: 'Methods',
+      type: 'simpleRichText',
+      fieldset: 'synopsis',
+      validation: Rule => Rule.required(),
+    },
+    {
+      name: 'keyFindings',
+      title: 'Key findings',
+      type: 'simpleRichText',
+      fieldset: 'synopsis',
+      validation: Rule => Rule.required(),
+    },
+    {
+      name: 'implications',
+      title: 'Implications',
+      type: 'simpleRichText',
+      fieldset: 'synopsis',
+      validation: Rule => Rule.required(),
+    },
+    {
+      name: 'journal',
+      title: 'Journal',
+      type: 'string',
       fieldset: 'paperDetails',
-      options: {
-        source: 'title',
-        maxLength: 200, // will be ignored if slugify is set
-        slugify: input =>
-          input
-            .toLowerCase()
-            .replace(/\s+/g, '-')
-            .slice(0, 200),
-        validation: Rule => Rule.required(),
-      },
+      validation: Rule => Rule.required(),
     },
     {
       name: 'paperUrl',
@@ -46,38 +57,44 @@ export default {
     {
       name: 'category',
       title: 'Category',
-      type: 'reference',
-      to: [{ type: 'category' }],
+      type: 'array',
+      of: [
+        {
+          type: 'reference',
+          to: [{ type: 'category' }],
+        },
+      ],
       fieldset: 'paperDetails',
       validation: Rule => Rule.required(),
     },
-
     {
-      name: 'methods',
-      title: 'Methods',
-      type: 'simplePortableText',
-      fieldset: 'synopsis',
-      validation: Rule => Rule.required(),
-    },
-    {
-      name: 'keyFindings',
-      title: 'Key findings',
-      type: 'simplePortableText',
-      fieldset: 'synopsis',
-      validation: Rule => Rule.required(),
-    },
-    {
-      name: 'implications',
-      title: 'Implications',
-      type: 'simplePortableText',
-      fieldset: 'synopsis',
-      validation: Rule => Rule.required(),
+      title: 'Slug',
+      name: 'slug',
+      type: 'slug',
+      fieldset: 'paperDetails',
+      options: {
+        source: 'title',
+        maxLength: 200,
+        validation: Rule => Rule.required(),
+      },
     },
   ],
   preview: {
     select: {
       title: 'title',
-      // subtitle: 'releaseDate'
+      category0: 'category.0.title',
+      category1: 'category.1.title',
+      category2: 'category.2.title',
+      category3: 'category.3.title',
+    },
+    prepare({ title, category0, category1, category2, category3 }) {
+      const categories = [category0, category1, category2].filter(Boolean);
+      const subtitle = categories.length > 0 ? `${categories.join(', ')}` : '';
+      const hasMoreCategories = Boolean(category3);
+      return {
+        title,
+        subtitle: hasMoreCategories ? `${subtitle}…` : subtitle,
+      };
     },
   },
 };
