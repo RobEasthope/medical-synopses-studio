@@ -29,6 +29,7 @@ export default {
                     name: 'paperUrl',
                     title: 'Paper URL',
                     type: 'url',
+                    validation: Rule => Rule.required()
                 },
                 {
                     name: 'paperPublicationDate',
@@ -39,7 +40,8 @@ export default {
                     name: 'category',
                     title: 'Category',
                     type: 'reference',
-                    to: [{ type: 'category' }]
+                    to: [{ type: 'category' }],
+                    validation: Rule => Rule.required()
                 },
             ]
         },
