@@ -12,6 +12,8 @@ import category from './documents/category';
 import about from './documents/about';
 import contact from './documents/contact';
 import settings from './documents/settings';
+import author from './documents/author';
+import post from './documents/post';
 
 // Objects
 import simpleRichText from './objects/simpleRichText';
@@ -32,5 +34,7 @@ export default createSchema({
     about,
     contact,
     settings,
+    author,
+    post,
   ]),
 });
