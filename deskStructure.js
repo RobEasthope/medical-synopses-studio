@@ -15,6 +15,11 @@ export default () =>
         .icon(GiRodOfAsclepius)
         .child(S.documentTypeList('synopsis')),
       S.listItem()
+        .title('Categories')
+        .schemaType('category')
+        .icon(GiRodOfAsclepius)
+        .child(S.documentTypeList('category')),
+      S.listItem()
         .title('Pages')
         .icon(BsFileRichtext)
         .child(

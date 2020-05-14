@@ -15,12 +15,12 @@
     "sanity"
   ],
   "dependencies": {
-    "@sanity/base": "^1.149.10",
-    "@sanity/components": "^1.149.10",
-    "@sanity/core": "^1.149.12",
-    "@sanity/default-layout": "^1.149.10",
+    "@sanity/base": "^1.149.15",
+    "@sanity/components": "^1.149.15",
+    "@sanity/core": "^1.149.13",
+    "@sanity/default-layout": "^1.149.15",
     "@sanity/default-login": "^1.149.11",
-    "@sanity/desk-tool": "^1.149.10",
+    "@sanity/desk-tool": "^1.149.15",
     "@sanity/vision": "^1.149.0",
     "prop-types": "^15.6",
     "react": "^16.2",
@@ -28,7 +28,7 @@
     "react-icons": "^3.10.0"
   },
   "devDependencies": {
-    "@sanity/cli": "^1.149.9",
+    "@sanity/cli": "^1.149.13",
     "babel-eslint": "^9.0.0",
     "eslint": "^5.14.1",
     "eslint-config-airbnb": "^17.1.0",
