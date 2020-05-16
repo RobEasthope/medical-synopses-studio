@@ -18,8 +18,8 @@ export default {
       validation: Rule => Rule.required(),
     },
     {
-      name: 'contactText',
-      title: 'Contact text',
+      name: 'mainText',
+      title: 'Main text',
       type: 'localeSimpleRichText',
       validation: Rule => Rule.required(),
     },
