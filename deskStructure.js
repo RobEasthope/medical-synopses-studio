@@ -1,9 +1,10 @@
 import S from '@sanity/desk-tool/structure-builder';
 
-import { GoMailRead } from 'react-icons/go';
+import { GoMailRead, GoLaw } from 'react-icons/go';
 import { GiPlagueDoctorProfile, GiRodOfAsclepius } from 'react-icons/gi';
 import { IoIosSettings } from 'react-icons/io';
 import { BsFileRichtext } from 'react-icons/bs';
+import { MdLibraryBooks } from 'react-icons/md';
 
 export default () =>
   S.list()
@@ -17,7 +18,7 @@ export default () =>
       S.listItem()
         .title('Categories')
         .schemaType('category')
-        .icon(GiRodOfAsclepius)
+        .icon(MdLibraryBooks)
         .child(S.documentTypeList('category')),
       S.listItem()
         .title('Pages')
@@ -44,6 +45,15 @@ export default () =>
                     .documentId('contact')
                 )
                 .icon(GoMailRead),
+              S.listItem()
+                .title('Legal page')
+                .child(
+                  S.editor()
+                    .id('legal')
+                    .schemaType('legal')
+                    .documentId('legal')
+                )
+                .icon(GoLaw),
             ])
         ),
       S.listItem()

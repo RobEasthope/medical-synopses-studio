@@ -16,21 +16,21 @@ export default {
     {
       name: 'methods',
       title: 'Methods',
-      type: 'simpleRichText',
+      type: 'localeSimpleRichText',
       fieldset: 'synopsis',
       validation: Rule => Rule.required(),
     },
     {
       name: 'keyFindings',
       title: 'Key findings',
-      type: 'simpleRichText',
+      type: 'localeSimpleRichText',
       fieldset: 'synopsis',
       validation: Rule => Rule.required(),
     },
     {
       name: 'implications',
-      title: 'Implications',
-      type: 'simpleRichText',
+      title: 'Implications & conclusions',
+      type: 'localeSimpleRichText',
       fieldset: 'synopsis',
       validation: Rule => Rule.required(),
     },
@@ -70,22 +70,17 @@ export default {
     {
       title: 'Slug',
       name: 'slug',
-      type: 'slug',
+      type: 'localeSlug',
       fieldset: 'paperDetails',
-      options: {
-        source: 'title',
-        maxLength: 200,
-        validation: Rule => Rule.required(),
-      },
     },
   ],
   preview: {
     select: {
       title: 'title.en',
-      category0: 'category.0.title',
-      category1: 'category.1.title',
-      category2: 'category.2.title',
-      category3: 'category.3.title',
+      category0: 'category.0.title.en',
+      category1: 'category.1.title.en',
+      category2: 'category.2.title.en',
+      category3: 'category.3.title.en',
     },
     prepare({ title, category0, category1, category2, category3 }) {
       const categories = [category0, category1, category2].filter(Boolean);

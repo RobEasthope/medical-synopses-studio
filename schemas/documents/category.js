@@ -6,25 +6,31 @@ export default {
     {
       name: 'title',
       title: 'Title',
-      type: 'string',
+      type: 'localeString',
       validation: Rule => Rule.required(),
     },
     {
       name: 'slug',
       title: 'Slug',
-      type: 'slug',
+      type: 'localeSlug',
       description:
         'Some frontends will require a slug to be set to show the project',
-      options: {
-        source: 'title',
-        maxLength: 96,
-      },
       validation: Rule => Rule.required(),
     },
     {
       name: 'description',
-      type: 'text',
+      type: 'localeSimpleRichText',
       title: 'Description',
     },
   ],
+  preview: {
+    select: {
+      title: 'title.en',
+    },
+    prepare({ title = '' }) {
+      return {
+        title,
+      };
+    },
+  },
 };

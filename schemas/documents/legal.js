@@ -1,7 +1,7 @@
 export default {
-  name: 'contact',
-  title: 'Contact page',
+  name: 'legal',
   type: 'document',
+  title: 'Legal page',
   fields: [
     {
       name: 'title',
@@ -28,7 +28,7 @@ export default {
     select: {
       title: 'title.en',
     },
-    prepare({ title = 'Contact page' }) {
+    prepare({ title = 'Legal page' }) {
       return {
         title,
       };

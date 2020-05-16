@@ -1,30 +1,26 @@
 export default {
   name: 'about',
+  title: 'About page',
   type: 'document',
-  title: 'About',
   fields: [
     {
       name: 'title',
       title: 'Title',
-      type: 'string',
+      type: 'localeString',
       validation: Rule => Rule.required(),
     },
     {
       name: 'slug',
       title: 'Slug',
-      type: 'slug',
+      type: 'localeSlug',
       description:
         'Some frontends will require a slug to be set to show the project',
-      options: {
-        source: 'title',
-        maxLength: 96,
-      },
       validation: Rule => Rule.required(),
     },
     {
-      name: 'aboutText',
-      title: 'About text',
-      type: 'simpleRichText',
+      name: 'mainText',
+      title: 'Main text',
+      type: 'localeSimpleRichText',
       validation: Rule => Rule.required(),
     },
     {
@@ -54,10 +50,9 @@ export default {
   ],
   preview: {
     select: {
-      title: 'title',
-      slug: 'slug',
+      title: 'title.en',
     },
-    prepare({ title = '' }) {
+    prepare({ title = 'About page' }) {
       return {
         title,
       };

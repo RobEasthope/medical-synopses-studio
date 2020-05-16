@@ -864,7 +864,8 @@
 
 "@sanity/cli@^1.149.13":
   version "1.149.13"
-  resolved "https://registry.npmjs.org/@sanity/cli/-/cli-1.149.13.tgz#1052d6d011906e5ca9c52292a8728760ea7a0b29"
+  resolved "https://registry.yarnpkg.com/@sanity/cli/-/cli-1.149.13.tgz#1052d6d011906e5ca9c52292a8728760ea7a0b29"
+  integrity sha512-+iuK4z5iJQqzVKN//YSklpWxBdaOe5UTawLkkiPvRcb99iTojc26zex0UIf1jnLBm85+YBcFGTVhk2DuPMpbrA==
 
 "@sanity/client@1.149.13":
   version "1.149.13"
