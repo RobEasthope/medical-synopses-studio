@@ -18,7 +18,7 @@ export default {
       validation: Rule => Rule.required(),
     },
     {
-      name: 'content',
+      name: 'mainText',
       title: 'Main text',
       type: 'localeSimpleRichText',
       validation: Rule => Rule.required(),
