@@ -29,7 +29,7 @@ export default {
     },
     {
       name: 'implications',
-      title: 'Implications',
+      title: 'Implications & conclusions',
       type: 'localeSimpleRichText',
       fieldset: 'synopsis',
       validation: Rule => Rule.required(),
