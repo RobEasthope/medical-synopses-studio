@@ -23,4 +23,14 @@ export default {
       title: 'Description',
     },
   ],
+  preview: {
+    select: {
+      title: 'title.en',
+    },
+    prepare({ title = '' }) {
+      return {
+        title,
+      };
+    },
+  },
 };
