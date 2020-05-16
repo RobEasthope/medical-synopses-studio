@@ -10,7 +10,7 @@ export default {
     {
       name: 'title',
       title: 'Title',
-      type: 'string',
+      type: 'localeString',
       validation: Rule => Rule.required(),
     },
     {
@@ -81,7 +81,7 @@ export default {
   ],
   preview: {
     select: {
-      title: 'title',
+      title: 'title.en',
       category0: 'category.0.title',
       category1: 'category.1.title',
       category2: 'category.2.title',
