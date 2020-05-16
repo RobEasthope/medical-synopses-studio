@@ -73,7 +73,7 @@ export default {
       type: 'slug',
       fieldset: 'paperDetails',
       options: {
-        source: 'title',
+        source: 'title.en',
         maxLength: 200,
         validation: Rule => Rule.required(),
       },
