@@ -1,7 +1,7 @@
 export default {
   name: 'about',
+  title: 'About page',
   type: 'document',
-  title: 'About',
   fields: [
     {
       name: 'title',
