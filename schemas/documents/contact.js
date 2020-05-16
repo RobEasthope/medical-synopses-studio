@@ -24,7 +24,7 @@ export default {
     {
       name: 'contactText',
       title: 'Contact text',
-      type: 'simpleRichText',
+      type: 'localeSimpleRichText',
       validation: Rule => Rule.required(),
     },
   ],
