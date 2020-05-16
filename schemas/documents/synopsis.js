@@ -1,5 +1,3 @@
-import { supportedLanguages } from '../supportedLanguages';
-
 export default {
   name: 'synopsis',
   type: 'document',
