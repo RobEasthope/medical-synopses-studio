@@ -1,3 +1,5 @@
+import { supportedLanguages } from '../supportedLanguages';
+
 export default {
   name: 'synopsis',
   type: 'document',
@@ -77,10 +79,10 @@ export default {
   preview: {
     select: {
       title: 'title.en',
-      category0: 'category.0.title',
-      category1: 'category.1.title',
-      category2: 'category.2.title',
-      category3: 'category.3.title',
+      category0: 'category.0.title.en',
+      category1: 'category.1.title.en',
+      category2: 'category.2.title.en',
+      category3: 'category.3.title.en',
     },
     prepare({ title, category0, category1, category2, category3 }) {
       const categories = [category0, category1, category2].filter(Boolean);
