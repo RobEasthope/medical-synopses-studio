@@ -12,6 +12,7 @@ import simpleRichText from './objects/simpleRichText';
 // Locale objects
 import localeString from './locale/localeString';
 import localeSimpleRichText from './locale/localeSimpleRichText';
+import localeSlug from './locale/localeSlug';
 
 // Document types
 import synopsis from './documents/synopsis';
@@ -35,6 +36,7 @@ export default createSchema({
     // Locale objects
     localeString,
     localeSimpleRichText,
+    localeSlug,
 
     // Documents
     synopsis,
