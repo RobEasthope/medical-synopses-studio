@@ -12,7 +12,7 @@ export default {
     {
       name: 'slug',
       title: 'Slug',
-      type: 'localeSlug',
+      type: 'slug',
       description:
         'Some frontends will require a slug to be set to show the project',
       options: {
