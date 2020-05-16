@@ -15,6 +15,9 @@ import settings from './documents/settings';
 import author from './documents/author';
 import post from './documents/post';
 
+// Locale objects
+import localeString from './locale/localeString';
+
 // Objects
 import simpleRichText from './objects/simpleRichText';
 
@@ -27,6 +30,9 @@ export default createSchema({
   types: schemaTypes.concat([
     // Objects
     simpleRichText,
+
+    // Locale objects
+    localeString,
 
     // Documents
     synopsis,
