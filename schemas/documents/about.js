@@ -12,13 +12,9 @@ export default {
     {
       name: 'slug',
       title: 'Slug',
-      type: 'slug',
+      type: 'localeSlug',
       description:
         'Some frontends will require a slug to be set to show the project',
-      options: {
-        source: 'title',
-        maxLength: 96,
-      },
       validation: Rule => Rule.required(),
     },
     {
