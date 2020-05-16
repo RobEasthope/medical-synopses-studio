@@ -20,8 +20,6 @@ import category from './documents/category';
 import about from './documents/about';
 import contact from './documents/contact';
 import settings from './documents/settings';
-import author from './documents/author';
-import post from './documents/post';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -44,7 +42,5 @@ export default createSchema({
     about,
     contact,
     settings,
-    author,
-    post,
   ]),
 });
