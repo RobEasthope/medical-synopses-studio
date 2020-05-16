@@ -70,10 +70,10 @@ export default {
     {
       title: 'Slug',
       name: 'slug',
-      type: 'slug',
+      type: 'localeSlug',
       fieldset: 'paperDetails',
       options: {
-        source: 'title.en',
+        source: doc => `${doc.title.en}`,
         maxLength: 200,
         validation: Rule => Rule.required(),
       },
