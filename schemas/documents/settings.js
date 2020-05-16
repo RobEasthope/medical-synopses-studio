@@ -31,10 +31,14 @@ export default {
       ],
     },
   ],
-
   preview: {
     select: {
-      title: 'title',
+      title: 'title.en',
+    },
+    prepare({ title = 'Site wide settings' }) {
+      return {
+        title,
+      };
     },
   },
 };
