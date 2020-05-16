@@ -72,11 +72,6 @@ export default {
       name: 'slug',
       type: 'localeSlug',
       fieldset: 'paperDetails',
-      options: {
-        source: doc => `${doc.title.en}`,
-        maxLength: 200,
-        validation: Rule => Rule.required(),
-      },
     },
   ],
   preview: {
