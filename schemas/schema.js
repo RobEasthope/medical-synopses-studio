@@ -6,6 +6,12 @@ import createSchema from 'part:@sanity/base/schema-creator';
 // eslint-disable-next-line import/no-unresolved
 import schemaTypes from 'all:part:@sanity/base/schema-type';
 
+// Objects
+import simpleRichText from './objects/simpleRichText';
+
+// Locale objects
+import localeString from './locale/localeString';
+
 // Document types
 import synopsis from './documents/synopsis';
 import category from './documents/category';
@@ -14,12 +20,6 @@ import contact from './documents/contact';
 import settings from './documents/settings';
 import author from './documents/author';
 import post from './documents/post';
-
-// Locale objects
-import localeString from './locale/localeString';
-
-// Objects
-import simpleRichText from './objects/simpleRichText';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
