@@ -1,3 +1,5 @@
+import { supportedLanguages } from '../supportedLanguages';
+
 export default {
   name: 'localeString',
   type: 'object',
