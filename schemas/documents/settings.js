@@ -5,7 +5,7 @@ export default {
   fields: [
     {
       name: 'contactDetails',
-      title: 'Contact details',
+      title: 'Contact/social media details',
       type: 'object',
       fields: [
         {
