@@ -26,10 +26,9 @@ export default {
   ],
   preview: {
     select: {
-      title: 'title',
-      slug: 'slug',
+      title: 'title.en',
     },
-    prepare({ title = '' }) {
+    prepare({ title = 'Contact page' }) {
       return {
         title,
       };
