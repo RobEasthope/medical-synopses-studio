@@ -70,7 +70,7 @@ export default {
     {
       title: 'Slug',
       name: 'slug',
-      type: 'slug',
+      type: 'localeSlug',
       fieldset: 'paperDetails',
       options: {
         source: 'title',
