@@ -4,6 +4,7 @@ import { GoMailRead, GoLaw } from 'react-icons/go';
 import { GiPlagueDoctorProfile, GiRodOfAsclepius } from 'react-icons/gi';
 import { IoIosSettings } from 'react-icons/io';
 import { BsFileRichtext } from 'react-icons/bs';
+import { MdLibraryBooks } from 'react-icons/md';
 
 export default () =>
   S.list()
@@ -17,7 +18,7 @@ export default () =>
       S.listItem()
         .title('Categories')
         .schemaType('category')
-        .icon(GiRodOfAsclepius)
+        .icon(MdLibraryBooks)
         .child(S.documentTypeList('category')),
       S.listItem()
         .title('Pages')
