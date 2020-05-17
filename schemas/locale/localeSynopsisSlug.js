@@ -18,7 +18,7 @@ export default {
     options: {
       source: doc => {
         if (doc.title[`${lang.id}`]) {
-          return `${doc.title[`${lang.id}`]}`;
+          return `${doc.title[`${lang.id}`]}-${lang.id}`;
         }
         return null;
       },
