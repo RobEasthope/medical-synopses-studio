@@ -17,21 +17,18 @@ export default {
       name: 'methods',
       title: 'Methods',
       type: 'localeSimpleRichText',
-      fieldset: 'synopsis',
       validation: Rule => Rule.required(),
     },
     {
       name: 'keyFindings',
       title: 'Key findings',
       type: 'localeSimpleRichText',
-      fieldset: 'synopsis',
       validation: Rule => Rule.required(),
     },
     {
       name: 'implications',
       title: 'Implications & conclusions',
       type: 'localeSimpleRichText',
-      fieldset: 'synopsis',
       validation: Rule => Rule.required(),
     },
     {
