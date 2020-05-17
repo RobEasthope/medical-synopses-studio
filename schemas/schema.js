@@ -13,6 +13,7 @@ import simpleRichText from './objects/simpleRichText';
 import localeString from './locale/localeString';
 import localeSimpleRichText from './locale/localeSimpleRichText';
 import localeSlug from './locale/localeSlug';
+import localeTaggedSlug from './locale/localeTaggedSlug';
 
 // Document types
 import synopsis from './documents/synopsis';
@@ -36,6 +37,7 @@ export default createSchema({
     localeString,
     localeSimpleRichText,
     localeSlug,
+    localeTaggedSlug
 
     // Documents
     synopsis,
