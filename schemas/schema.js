@@ -37,7 +37,7 @@ export default createSchema({
     localeString,
     localeSimpleRichText,
     localeSlug,
-    localeTaggedSlug
+    localeTaggedSlug,
 
     // Documents
     synopsis,
